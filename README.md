@@ -1,6 +1,6 @@
 # Trabalho Acadêmico: API REST para CRUD de Pessoas
 
-Este é um trabalho acadêmico desenvolvido para a disciplina de Desenvolvimento Web. A API foi construída utilizando Node.js, Nodemon, Express, Sequelize-SQLite (como banco de dados), dotenv, cors, jsonwebtoken, bcrypt, multer.
+Este é um trabalho acadêmico desenvolvido para a disciplina de Desenvolvimento Web. A API foi construída utilizando Node.js, Nodemon, Express, Sequelize-SQLite (como banco de dados), dotenv, jsonwebtoken, bcrypt.
 
 ## Funcionalidades
 
@@ -28,6 +28,10 @@ Este é um trabalho acadêmico desenvolvido para a disciplina de Desenvolvimento
 
 **Reports**:
 - `GET /reports/findAllDataByUser/:username`: Permite visualizar todos os dados de perfil e de usuário, de um usuário fornecido. *(Autenticada)*
+
+**Upload de Images do Usuário**:
+Via form-data.
+- `POST /uploads/users/:username`: Permite fazer o upload de imagens no formato JPEG/PNG. *(Autenticada)*
 
 #### Corpo da Requisição (HTTP BODY)
 **Users**
@@ -57,6 +61,14 @@ Este é um trabalho acadêmico desenvolvido para a disciplina de Desenvolvimento
   "birthdate": "2000-05-25",
   "city": "Cianorte",
   "state": "pr",
+}
+```
+
+**Upload de Imagem do Usuário** 
+Via Form-Data
+```json
+{
+  "image": "Choose File Button",
 }
 ```
 
