@@ -29,6 +29,10 @@ Este é um trabalho acadêmico desenvolvido para a disciplina de Desenvolvimento
 **Reports**:
 - `GET /reports/findAllDataByUser/:username`: Permite visualizar todos os dados de perfil e de usuário, de um usuário fornecido. *(Autenticada)*
 
+**Upload de Images do Usuário**:
+Via form-data.
+- `POST /uploads/users/:username`: Permite fazer o upload de imagens no formato JPEG/PNG. *(Autenticada)*
+
 #### Corpo da Requisição (HTTP BODY)
 **Users**
 - Deve-se fazer o login e passar o token em authorization.
@@ -57,6 +61,14 @@ Este é um trabalho acadêmico desenvolvido para a disciplina de Desenvolvimento
   "birthdate": "2000-05-25",
   "city": "Cianorte",
   "state": "pr",
+}
+```
+
+**Upload de Imagem do Usuário** 
+Via Form-Data
+```json
+{
+  "image": "Choose File Button",
 }
 ```
 
